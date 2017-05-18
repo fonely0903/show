@@ -22,7 +22,7 @@
             <div class="pull-right">
                 <!-- 不同的過濾器 -->
                 <span class="glyphicon glyphicon-time"    @click="control.sort = 'time'"></span>
-                <span class="glyphicon glyphicon-tag"     @clicl="control.sort = 'price'"></span>
+                <span class="glyphicon glyphicon-tag"     @click="control.sort = 'price'"></span>
                 <input type="text"  placeholder="過濾器" v-model="control.filter">
             </div>
         </nav>
@@ -124,6 +124,7 @@
                           case "price":
                             current = current.sort(function(a,b){
                               return (parseInt(a.price) - parseInt(b.price))
+
                             })
                             break ;
                           default : break ;
